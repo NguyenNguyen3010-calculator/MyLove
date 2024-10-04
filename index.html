@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anni 490 Days We Love</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Georgia', serif;
+            background-color: #f8ece0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            background-color: #f8ece0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Rain of hearts */
+        .heart-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b6b;
+            transform: rotate(45deg);
+            animation: fall 5s infinite linear;
+        }
+
+        .heart:before, .heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6b6b;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(45deg); }
+            100% { transform: translateY(100vh) rotate(45deg); }
+        }
+
+        .heart:nth-child(1) { left: 10%; animation-duration: 6s; }
+        .heart:nth-child(2) { left: 20%; animation-duration: 4s; }
+        .heart:nth-child(3) { left: 30%; animation-duration: 5s; }
+        .heart:nth-child(4) { left: 40%; animation-duration: 6.5s; }
+        .heart:nth-child(5) { left: 50%; animation-duration: 5s; }
+        .heart:nth-child(6) { left: 60%; animation-duration: 7s; }
+        .heart:nth-child(7) { left: 70%; animation-duration: 4.5s; }
+        .heart:nth-child(8) { left: 80%; animation-duration: 6s; }
+        .heart:nth-child(9) { left: 90%; animation-duration: 5.5s; }
+
+        /* Slide text styles */
+        .slide h1, h3 .slide p {
+            color: #d96c55;
+            font-size: 48px;
+            z-index: 2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide p {
+            font-size: 24px;
+        }
+
+        .nav-btn {
+            position: absolute;
+            bottom: 20px;
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+        }
+
+        .nav-btn:hover {
+            background-color: #f67280;
+        }
+
+        .prev-btn {
+            left: 20px;
+        }
+
+        .next-btn {
+            right: 20px;
+        }
+
+        /* Slide contents */
+        .slide-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: linear-gradient(to right, #f8b195, #f67280, #f8b195);
+        }
+
+        /* Special effects for all slides */
+        .slide h1, h3 {
+            animation: bounceIn 2s ease-in-out forwards;
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slideshow-container">
+        <div class="heart-rain">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <div class="slide-content">
+                <h1>Anni 490 Days We Love</h1>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="frame">
+                    <h1>Our Beautiful Journey:</h1>
+                    <h3> We have been through a very long journey since 3 Jun,2023. we had done many things together, argument (checked), love (checked), cry (checked), but thhis is the only time I do this, I dropped you hardly so now I just want to do something to pull you up, to make you feel "Ah, this is my man", to make you feel I always by your side, I swear to god, this website is unique, no one can do like this, I promise. Now press the "Next" button.</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="frame">
+                    <h1>Memories We Cherish:</h1>
+                    <h3>We have many memories together, you know I was happy when I first saw you, you and me always had a route when hanging out at the weekend, you know what is it? We always met first then went eat, and we went for photos or just for morning coffee, and the rest of the day we spent for something you knew that, I cannot say here. Now press the "Next" button.</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="frame">
+                    <h1>I am not good:</h1>
+                    <h3>Yah, just like 2 or 3 weeks ago, I had just cheated on you while the night before you chose to stay when I am really broke, I swear to god now I will not do it again, I know you will not trust me again but I just try my best to let you know that you are my only one, you are my babe, you are my 4 years old baby, you are the cutest girl in the world, you are the prettiest girl, you are the most beautiful girl, to let you know that I always here, I always the one who loves you, who always waiting for you. Now press the "Next" button.</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="frame">
+                    <h1>Thank You:</h1>
+                    <h3>Thanks for being my girl, thanks for joining my life, thanks for taking care of me, thanks for everything, thanks for being honestly, thanks for suffering my childishness, thanks for being my baby and thanks for everything. I love you, Always love you, this love I swear it is unique, no one can love you like this, I make this website for only you, I am sorry if it is not beautiful but I hope you will open and read it when you want to. I hope that all of this will make you feel better, I hope this will be the thing that gonna heal you even a little bit, I love you Pixye (Ngo Nu Hoang Anh). Now press the "Next" button.</h3>
+                </div>
+            </div>
+        </div>
+
+          <!-- Slide 6 -->
+          <div class="slide">
+            <div class="slide-content">
+                <div class="frame">
+                    <h1>I want to say:</h1>
+                    <h3>I want to say I love you, I miss you, I am always here with you, don't worry about anything, I will do all it for you, I love you Ngo Nu Hoang Anh. Now press the "Next" button.</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="frame">
+                    <h1>Thank You</h1>
+                    <a href="https://www.youtube.com/watch?v=AdBzzpq3xV4">Click me</a>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <!-- Navigation buttons -->
+        <button class="nav-btn prev-btn" onclick="prevSlide()">Previous</button>
+        <button class="nav-btn next-btn" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === n) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    </script>
+
+    
+</body>
+</html>
+
